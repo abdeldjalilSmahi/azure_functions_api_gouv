@@ -82,6 +82,7 @@ def gouv_api(myTimer: func.TimerRequest) -> None:
             
             logging.info(f"file {filename} has been saved successfully into the blob storage.")
         # exception if there are an error
+        # deploy
         except requests.exceptions.RequestException as e:
             logging.error(f"Failed to download URL : {url}. Error : {e}")
             
