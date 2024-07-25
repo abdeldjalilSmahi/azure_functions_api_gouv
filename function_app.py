@@ -29,7 +29,7 @@ if not CONNECTION_STRING or not CONTAINER_NAME or not any(API_URLs):
 blob_service_client = BlobServiceClient.from_connection_string(CONNECTION_STRING)
 container_client = blob_service_client.get_container_client(CONTAINER_NAME)
 
-@app.schedule(schedule="0 */30 * * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False)
+@app.schedule(schedule="10 11 * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False)
 def gouv_api(myTimer: func.TimerRequest) -> None:
     """
         API client to download a stream files.
